@@ -1,0 +1,158 @@
+/* GLOBAL */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+:root {
+  --transition-time: 0.2s;
+  --bg-main-color: #2f2723;
+  --light-yellow: #efc764;
+  --light-orange: #e68e7b;
+  --light-blue: #97d4d9;
+  --light-green: #b3dfd3;
+  --light-pink: #feafbe;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--bg-main-color);
+}
+
+.mg-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.no-margin {
+  margin: 0px !important;
+}
+
+/* BALLS */
+/* BALL 1 */
+.ball-1 {
+  position: absolute;
+  height: 70%;
+  aspect-ratio: 1;
+  background: linear-gradient(
+    145.3deg,
+    var(--light-yellow) 19.92%,
+    var(--light-orange) 83.27%
+  );
+  border-radius: 50%;
+  top: -18%;
+  left: 10%;
+  z-index: -1;
+}
+
+/* BALL 2 */
+.ball-2 {
+  position: absolute;
+  height: 40%;
+  aspect-ratio: 1;
+  background: linear-gradient(
+    207.98deg,
+    var(--light-blue) 14.75%,
+    var(--light-green) 86.97%
+  );
+  border-radius: 50%;
+  bottom: 10%;
+  right: 20%;
+  z-index: -1;
+}
+
+/* SCREEN */
+.screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+/* CARD */
+.card {
+  width: 400px;
+  padding: 44px 22px;
+  height: max-content;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(50px);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* CARD HEADER */
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-photo {
+  width: 40%;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.person-name {
+  font-size: 1.5rem;
+}
+
+/* CARD BODY */
+.data-body {
+  display: flex;
+  height: 1.2rem;
+  padding: 15px 0px;
+  margin-bottom: 20px;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 35px;
+  text-decoration: none;
+  color: white;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%);
+  transition: ease-out var(--transition-time);
+}
+
+.data-body:hover .data-content {
+  top: calc(-100% - 1.2rem);
+  transition: ease-in var(--transition-time);
+}
+
+.data-body:hover path {
+  fill: var(--light-pink);
+  transition: ease-in var(--transition-time);
+}
+
+.data-body:hover {
+  color: var(--light-pink);
+  border: 1px solid var(--light-pink);
+  transition: ease-in var(--transition-time);
+}
+
+.data-content {
+  position: relative;
+  top: 0%;
+  transition: ease-out var(--transition-time);
+}
+
+.name-icon {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.svg-icon {
+  height: 1.2rem;
+}
+
+.svg-icon path {
+  fill: #fff;
+}
